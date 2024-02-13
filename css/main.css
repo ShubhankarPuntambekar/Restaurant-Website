@@ -1,0 +1,1605 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cute+Font&family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cute+Font&family=Dancing+Script:wght@500&family=Diphylleia&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#fcfaf7;
+    overflow-x: hidden;
+}
+.page-header{
+    min-width:375px;
+    height:auto;
+    padding:1rem 0.2rem;
+    margin:0 auto;
+}
+.page-nav{
+    padding:0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.title{
+    position: relative;
+    right:1rem;
+    bottom: 0.5rem;
+    padding:1rem;
+    margin:0.5rem;
+}
+.title-text{
+    color:#24240e;
+    font-size:4rem;
+    font-family: 'Grape Nuts', cursive;
+}
+
+.nav-list{
+    position: relative;
+    right:3.5rem;
+    padding:0.5rem 0.5rem;
+    list-style:none;
+    display: flex;
+    flex-wrap: wrap;
+    flex:1;
+    justify-content:center;
+    align-items: center;
+    gap:1rem;
+}
+.nav{
+    padding:0.8rem;
+    margin:0.2rem;
+}
+.nav-link ,.nav-link:visited{
+    text-decoration: none;
+    color:#313114;
+    font-size:1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing:0.05em;
+    text-align: center;
+    
+}
+.nav-link:hover, .nav-link:focus{
+    text-shadow: #24240e 0.5px 0.5px 1px;
+}
+.head-social-list{
+    position: relative;
+    bottom: 0.5rem;
+    list-style:none;
+    padding:0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    justify-content:space-around;
+    gap:0.5rem;
+}
+.social-link{
+    width:55px;
+    height:35px;
+    padding:0.2rem; 
+}
+.content{
+    width:auto;
+    height:auto;
+    padding:0 0.2rem;
+}
+.image-slider{
+    width:auto;
+    height: auto;
+    margin:1rem auto;
+    padding:320px 0;
+    position: relative;
+    z-index:10;
+}
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgb(0, 0, 0,0.3);
+    z-index:11;
+}
+@keyframes fade{
+    0%{
+        opacity: 1;
+    }
+    33.33%{
+        opacity:0;
+    }
+    66.66%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.slide-show{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    animation:fade 9s ease-in-out alternate infinite ;
+}
+
+.img-1{
+    animation-delay: 0s;
+}
+.img-2{
+    animation-delay: 3s;
+}
+.img-3{
+    animation-delay: 6s;
+}
+
+.quote{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width:1200px;
+    height: auto;
+    padding:100px 0;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index:12;
+}
+.quote-text{
+    padding:70px 0 50px 0;
+    width:100%;
+    height:auto;
+    text-align: center;
+    font-size:3rem;
+    font-family: "Mukta",sans-serif;
+    line-height: normal;
+    color:#ffffff;
+    z-index: 12;
+}
+.quote-footer{
+    padding:0 0 35px 0;
+    text-align: center;
+    font-size:1rem;
+    font-family: "Mukta",sans-serif;
+    line-height: normal;
+    color:#ffffff;
+    z-index: 12;
+}
+.nav-btn-toggle{
+    display: none;
+    
+}
+
+.about{
+    display: flex;
+    flex-wrap:wrap; 
+    width:auto;
+    height:auto;
+    padding:50px 5rem;
+    justify-content: space-evenly;
+    margin:0.5rem auto;
+    align-items: center;
+}
+
+.about-banner{
+    width:auto;
+    height:auto;
+    padding:3rem 1rem;
+    border:2px solid lightgray;
+    border-radius: 5px;
+    margin:0.5rem auto;
+   
+}
+.about-banner p{
+    text-align: justify;
+    margin:1rem 0.5rem 0 0.5rem;
+    padding:1rem 1rem;
+    font-size:2.5rem;
+    font-weight:400;
+    font-family:'Grape Nuts', cursive;
+    color:#313114;
+}
+
+.about-details{
+    max-width: 50%;
+    text-align:justify;
+    padding:5rem 4rem;
+    margin:1rem auto;
+    font-size:1.1rem ;
+    font-family:"Asap", sans-serif;
+    color:#24240e;
+   
+}
+
+.para-container{
+    padding:0.5rem;
+}
+.para-container p,h2{
+    margin-bottom: 1rem;
+}
+h2{
+    text-align: right;
+    font-size: 2rem;
+    font-family:"Asap",sans-serif;
+    
+}
+
+.marketing-background{
+    display: flex;
+    justify-content: center;
+    width:auto;
+    height:auto;
+    padding:200px 0 180px 0;
+    background-image:url("../IMAGES/marketing-largest.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.marketing-caption{
+    width:auto;
+    height: auto;
+    padding:3rem 0 3rem 0;
+    margin:0.5rem 0;
+    align-items: center;
+}
+.marketing-caption p{
+    width:auto;
+    font-family:'Grape Nuts', cursive;
+    font-size:8rem;
+    color: #fcfaf7;
+    padding:2rem 0;
+    margin: auto;
+}
+
+.catering{
+    display:flex;
+    flex-wrap: wrap;
+    width:auto;
+    height:auto;
+    padding:0;
+    margin:0.5rem auto; 
+    justify-content:center;
+    align-items:center;
+}
+.cater-image-container{
+    width:auto;
+    height:auto;
+    padding:0.5rem;
+    margin:0;
+}
+ 
+.cater-image{
+    width:100%;
+    height:auto;
+}
+
+.catering-detail{
+    padding:3rem 1.5rem 1rem 1.5rem;
+    margin:0;
+    width:40%;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.6rem;
+    font-family:"Asap", sans-serif;
+    color:#24240e;
+    padding:0 0.5rem;
+    text-align:right;
+}
+
+.catering-quote{
+    font-family:"Asap", sans-serif;
+    color:#414138;
+    font-style: italic;
+    padding:0 0.5rem;
+    text-align:right;
+    font-size: 0.9rem;
+    margin:0 auto 1rem auto;
+}
+
+.catering-para{
+    font-size:1rem;
+    font-family:"Asap", sans-serif;
+    color:#414138;
+    padding:0 0.5rem;
+    margin-bottom:0.5rem;
+    text-align:justify;
+}
+.contact-link span{
+    color:#606033;
+}
+.contact-link span:hover{
+    color:#24240e;
+}
+.contact-link,.contact-link:visited{
+    text-decoration: none;
+    font-style: italic;
+}
+.contact-link:hover, .contact-link:visited,.contact-link:focus{
+    text-decoration: underline;
+    text-decoration-color:#24240e ;
+}
+.menu{
+    max-width:auto;
+    height:auto;
+    padding:auto;
+    margin: 0.5rem 0;
+}
+.menu-header{
+    width:100%;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Dancing Script', cursive;
+    color: #24240e;
+    padding:0.5rem;
+    margin:0.2rem auto;
+    gap:0.5rem;
+}
+.menu-display{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    height: auto;
+    padding: 0;
+    margin:0.5rem auto;
+    justify-content: space-around;
+}
+.menu-link{
+    display: block;
+    width:33.3333%;
+    flex:1;
+    height:260px;
+    text-align: center;
+    text-decoration: none;
+    padding:80px 10px;
+    background-color: #fcfaf7;
+}
+.menu-text{
+    width:50%;
+    margin:0.5rem auto;
+    background-color:transparent;
+    font-family: 'Dancing Script', cursive;
+    font-size:45px;
+    color:#f7f7f7;
+}
+.break-text{
+    color:#1a1a0d;
+}
+
+/* .menu-text:hover{
+    background-color: #303030;
+    color:#fcfaf7;
+} */
+.all-day{
+    background-color: #1a1a0d;
+}
+
+.breakfast{
+    
+    background-color:#fff2d7;
+}
+.dinner{
+   
+    background-color: #1a1a0d;
+}
+
+.order-details{
+    width:auto;
+    height:auto;
+    margin:0.5rem 0;
+    padding:0 0;
+}
+.order-time{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+    width:auto;
+    padding:180px 0 130px 0;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../IMAGES/decorative.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.timing{
+    width:100%;
+    height: auto;
+    padding:1rem 1rem;
+    margin:0 50px;
+    background-color:transparent; 
+}
+.time-head{
+    margin-bottom:1rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family:"Asap",sans-serif;
+    color:#ffffff;
+}
+.time-details{
+    margin-bottom:0.5rem;
+    text-align: center;
+    font-family:"Asap",sans-serif;
+    font-size: 1.5rem;
+    color:#ffffff;
+}
+.food-del-link{
+    width:100%;
+    height: auto;
+    padding:1rem 1rem;
+    margin:0 50px;
+    background-color:transparent; 
+    text-align: center;
+}
+.order-link, .order-link:visited{
+    display: block;
+    width:85px;
+    padding:1rem 0.2rem 0 0.2rem;
+    background-color:#8c2c96;
+    aspect-ratio:1;
+    border:2px solid #313114;
+    border-radius:50%;
+    position:fixed;
+    text-align: center;
+    color:#fcfaf7;
+    bottom:1rem;
+    right:2rem;
+    text-decoration:none;
+    font-family:'Mukta', sans-serif;
+    z-index:9;
+}
+
+.order-link:hover,.order-link:active,.order-link:focus{
+    color:#24240e;
+    background-color: #fcfaf7;
+}
+.page-footer{
+    padding-top: 1rem;
+}
+.footer-details{
+    width:auto;
+    height:auto;
+    padding:0;
+    margin:0;
+}
+.footer-contact{
+    width:auto;
+    height:auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin:0.5rem;
+    padding:0.5rem;
+   
+}
+.contact-container{
+    width:33.33333%;
+    flex:0 0 33.33333%;
+    text-align: center;
+}
+.head{
+    margin-bottom: 1rem;
+    font-size:1.5rem;
+    font-family:"Asap",sans-serif ;
+    color:#000000;
+}
+.details{
+    width:auto;
+    height:95px;
+    font-size:14px;
+    font-family:"Asap",sans-serif ;
+    color:#52432e;
+}
+.policy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    
+}
+.policy a, .policy a:visited{
+    text-decoration: none;
+    font-family:"Asap",sans-serif ;
+    color:#24240e;
+}
+.policy a:hover, .policy a:active{
+    text-decoration: underline;
+}
+.footer-social{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.footer-social p{
+    font-size:0.8rem;
+    font-family:"Asap",sans-serif ;
+    color:#000000;
+}
+.social-container{
+    display: flex;
+    gap:0.5rem;
+    margin:0.2rem;
+    padding:0.5rem;
+    
+}
+.footer-end{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+    margin:0.2rem;
+    padding:0.5rem;
+}
+.footer-end p,h6{
+    font-size:0.8rem;
+    font-family:"Asap",sans-serif ;
+    color:#000000;
+}
+@media (max-width:1000px){
+    .nav-list{
+        position:fixed; 
+        inset:0 0 0 30%;
+        flex-direction: column;
+        justify-content:center;
+        align-items:flex-start;
+        order: 2;
+        z-index:20;
+        gap:0;
+        padding:min(30vh,10rem) 3rem;
+        background:hsla(55, 59%, 33%, 0.2);
+        backdrop-filter: blur(1rem);
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+        cursor: pointer;
+    }
+
+    .nav-list[data-visible ="true"] {
+        transform: translateX(0%);
+        cursor: pointer;
+    }
+    .nav-link:hover{
+        text-shadow: #24240e 0.5px 0.5px 1px;
+    }
+    .nav-btn-toggle{
+        display:block;
+        position:absolute;
+        top:3.5rem;
+        right:1rem;
+        z-index:21;
+        background-image: url("../IMAGES/nav-menu.png");
+        background-repeat: no-repeat;
+        border:0;
+        justify-content: center;
+        order: 1;
+        width:50px;
+        aspect-ratio: 1;
+        appearance:button;
+        background-color:transparent;
+    }
+
+    .nav-btn-toggle[aria-expanded="true"]{
+        background-image:url("../IMAGES/close.png");
+        background-repeat: no-repeat;
+        border:0;
+        width:50px;
+        aspect-ratio: 1;
+        appearance:button;
+        background-color:transparent;
+    }
+    .social-nav {
+        display: none;
+    }
+    .order-link{
+        z-index:22;
+    }
+}
+
+@media (min-width:645px) and (max-width:1000px){
+    
+    .title-text{
+        font-size: 4rem;
+    }
+    .image-slider{
+        width:auto;
+        height: auto;
+        margin:1rem auto;
+        padding:200px 0;
+        position: relative;
+    }
+    .quote{
+        padding:2rem 0;
+        width:auto;
+    }
+    .quote-text{
+        padding:0;
+        font-size:2rem;
+    }
+    .quote-footer{
+        font-size:1rem;
+    }
+
+    .about{
+        width:auto;
+        height:auto;
+        padding:10px 0.5rem;
+        justify-content: space-evenly;
+        margin:0.5rem auto;
+        align-items: center;
+    }
+    .about-banner{
+        width:auto;
+        height:auto;
+        padding:5px 0.8rem;
+        border:2px solid lightgray;
+        border-radius: 5px;
+        margin:0.8rem auto;
+       
+    }
+    .about-banner p{
+        text-align:center;
+        margin:0.2rem 0.2rem 0 0.2rem;
+        padding:0.5rem 0.5rem;
+        font-size:2rem;
+    }
+    .about-details{
+        width:auto;
+        max-height:50%;
+        text-align:left;
+        padding:5px 0.2rem;
+        margin:0.5rem 0;
+        font-size:19px;
+    }
+    .para-container{
+        padding:0.2rem 0.2rem;
+    }
+    .para-container p,h2{
+        margin-bottom:0.8rem;
+       
+    }
+    h2{
+        text-align:center;
+        font-size:1.6rem;
+    }
+
+    .marketing-background{
+        width:auto;
+        height:auto;
+        padding:150px 0 130px 0;
+        background-image:url("../IMAGES/marketing-largest.png");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        background-attachment:fixed;
+        
+    }
+    .marketing-caption{
+        width:auto;
+        height: auto;
+        padding:1.5rem 0 4rem;
+        margin:0 auto;
+        background-color:transparent;
+        align-items:center;
+    }
+    .marketing-caption p{
+        width:auto;
+        font-size:6rem;
+        padding:2rem 0;
+        margin: auto;
+    }
+    .catering{
+        gap:0;
+        width:auto;
+        height:auto;
+        padding:1rem 0;
+        margin:0.5rem auto; 
+        justify-content: space-evenly;
+        align-items: center;
+    }
+   .cater-image-container{
+        max-width:50%;
+        height:auto;
+        padding:1rem 0.5rem;
+        margin: 0;
+    }
+     
+    .cater-image{
+        width:100%;
+        height:auto;
+    }
+    
+    .catering-detail{
+        padding:1rem 0.5rem;
+        margin:0;
+        max-width: 50%;
+    }
+    
+    h3{
+        font-size: 1.3rem;
+        font-family:"Asap", sans-serif;
+        color:#24240e;
+        padding:0 0.5rem;
+        text-align:right;
+    }
+    
+    .catering-quote{
+        font-family:"Asap", sans-serif;
+        color:#414138;
+        font-style: italic;
+        padding:0 0.5rem;
+        text-align:right;
+        font-size: 0.9rem;
+        margin:0 auto 1rem auto;
+    }
+    
+    .catering-para{
+        font-size:1rem;
+        font-family:"Asap", sans-serif;
+        color:#414138;
+        padding:0 0.5rem;
+        margin-bottom:0.5rem;
+        text-align:justify;
+    }
+    .order-details{
+        width:auto;
+        height:auto;
+        margin:0.5rem 0;
+        padding:0 0;
+    }
+    .order-time{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:center;
+        width:auto;
+        padding:155px 0 65px 0;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../IMAGES/decorative-largest.png");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        background-attachment:fixed;
+    }
+    
+    .timing{
+        width:100%;
+        height: auto;
+        padding:0.2rem 0;
+        margin:0 20px;
+        background-color:transparent; 
+    }
+     
+    .time-head{
+        margin-bottom:0.5rem;
+        text-align:center;
+        font-size:2rem;
+        font-family:"Asap",sans-serif;
+        color:#fcfaf7;
+    }
+    
+    .time-details{
+        margin-bottom:0.5rem;
+        text-align: center;
+        font-family:"Asap",sans-serif;
+        font-size:1.5rem;
+        color:#fcfaf7;
+    } 
+    .food-del-link{
+        width:100%;
+        height: auto;
+        padding:0.5rem 0;
+        margin:0 50px;
+        background-color:transparent; 
+        text-align: center;
+    }
+    .footer-contact{
+        width:auto;
+        height:auto;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin:0.5rem 0;
+        padding:0 0.5rem 0 0.5rem;
+       
+    }
+    .contact-container{
+        width:auto;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .head{
+        margin-bottom:0.4rem;
+        font-size:1.3rem;
+        font-family:"Asap",sans-serif ;
+        color:#000000;
+    }
+    .details{
+        width:100%;
+        height:auto;
+        font-size:1rem;
+        font-family:"Asap",sans-serif ;
+        color:#52432e;
+    }
+    .policy{
+        font-size:10px;
+        width:auto; 
+    }
+    .footer-social p{
+        font-size:0.9rem;
+        font-family:"Asap",sans-serif ;
+        color:#000000;
+    }
+
+    .footer-end p,h6{
+        font-size:10px;
+        font-family:"Asap",sans-serif ;
+        color:#000000;
+    }
+    .menu-header{
+        font-size: 2.7rem;
+    }
+    .menu-text{
+        font-size: 40px;
+    }
+}
+@media (min-width:438px) and (max-width:645px){
+    
+    .title-text{
+        font-size: 3rem;
+    }
+    .image-slider{
+        width:auto;
+        height: auto;
+        margin:1rem auto;
+        padding:190px 0;
+        position: relative;
+    }
+    .quote{
+        padding:1.5rem 0;
+        width:auto;
+    }
+    .quote-text{
+        padding:0;
+        font-size:1.3rem;
+    }
+    .quote-footer{
+        font-size:0.9rem;
+    }
+    .about{
+        flex-direction: column;
+        flex-wrap:wrap; 
+        width:auto;
+        height:auto;
+        padding:10px 0.5rem;
+        justify-content: space-between;
+        margin:0.5rem auto;
+        align-items: center;
+    }
+    .about-banner{
+        width:auto;
+        height:auto;
+        padding:5px 0.8rem;
+        border:2px solid lightgray;
+        border-radius: 5px;
+        margin:0.8rem auto;
+       
+    }
+    .about-banner p{
+        text-align:center;
+        margin:0.2rem 0.2rem 0 0.2rem;
+        padding:0.5rem 0.5rem;
+        font-size:1.9rem;
+    }
+    .about-details{
+        width:auto;
+        max-height:50%;
+        text-align:justify;
+        padding:5px 0;
+        margin:0.5rem 0;
+        font-size:16px;
+    }
+    .para-container{
+        padding:0 0;
+    }
+    .para-container p,h2{
+        margin-bottom:0.8rem;
+    }
+    h2{
+        text-align:center;
+        font-size:1.5rem;
+    }
+
+    .marketing-background{
+        width:auto;
+        height:auto;
+        padding:150px 0 70px 0;
+        background-image:url("../IMAGES/marketing-large.png");
+        background-attachment:local;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .marketing-caption{
+        width:auto;
+        height: auto;
+        padding:1.5rem 0 4rem;
+        margin:0 auto;
+        background-color:transparent;
+        align-items:center;
+    }
+    .marketing-caption p{
+        width:auto;
+        font-size:3.8rem;
+        padding:2rem 0;
+        margin: auto;
+    }
+    .catering{
+        gap:0;
+        width:auto;
+        height:auto;
+        padding:1rem 0;
+        margin:0.5rem auto; 
+    }
+   .cater-image-container{
+        width:auto;
+        height:auto;
+        padding:0.5rem 1.5rem;
+    }
+     
+    .cater-image{
+        width:100%;
+        height:auto;
+    }
+    
+    .catering-detail{
+        width:100%;
+        padding:0.5rem 0.5rem;
+        
+    }
+    
+    h3{
+        font-size: 1.5rem;
+        font-family:"Asap", sans-serif;
+        color:#24240e;
+        padding:0 0.5rem;
+        text-align:center;
+    }
+    
+    .catering-quote{
+        font-family:"Asap", sans-serif;
+        color:#414138;
+        font-style: italic;
+        padding:0 0.5rem;
+        text-align:center;
+        font-size: 0.8rem;
+        margin:0 auto 1rem auto;
+    }
+    
+    .catering-para{
+        width:auto;
+        font-size:15px;
+        font-family:"Asap", sans-serif;
+        color:#414138;
+        padding:0 0.5rem;
+        margin:0 auto 0.5rem auto;
+        text-align:left;
+        
+    }
+    .order-details{
+        width:auto;
+        height:auto;
+        margin:0.5rem 0;
+        padding:0 0;
+    }
+    .order-time{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:center;
+        width:auto;
+        padding:90px 0 60px 0;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("../IMAGES/decorative-large.png");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        background-attachment:local;
+    }
+    
+    .timing{
+        width:100%;
+        height: auto;
+        padding:0.2rem 0;
+        margin:0 20px;
+        background-color:transparent; 
+    }
+     
+    .time-head{
+        margin-bottom:0.5rem;
+        text-align:center;
+        font-size:1.9rem;
+        font-family:"Asap",sans-serif;
+        color:#fcfaf7;
+    }
+    
+    .time-details{
+        margin-bottom:0.5rem;
+        text-align: center;
+        font-family:"Asap",sans-serif;
+        font-size:1.3rem;
+        color:#fcfaf7;
+    } 
+    .food-del-link{
+        width:100%;
+        height: auto;
+        padding:0.5rem 0;
+        margin:0 50px;
+        background-color:transparent; 
+        text-align: center;
+    }
+
+    .footer-contact{
+        width:auto;
+        height:auto;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin:0.5rem 0;
+        padding:0 0.5rem 0 0.5rem;
+       
+    }
+    .contact-container{
+        width:auto;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .head{
+        margin-bottom:0.4rem;
+        font-size:1.5rem;
+        font-family:"Asap",sans-serif ;
+        color:#000000;
+    }
+    .details{
+        width:100%;
+        height:auto;
+        font-size:1rem;
+        font-family:"Asap",sans-serif ;
+        color:#52432e;
+    }
+    .policy{
+        font-size:10px;
+        width:auto; 
+    }
+    .footer-social p{
+        font-size:0.9rem;
+        font-family:"Asap",sans-serif ;
+        color:#000000;
+    }
+
+    .footer-end p,h6{
+        font-size:10px;
+        font-family:"Asap",sans-serif ;
+        color:#000000;
+    }
+    .menu-header{
+        font-size: 2rem;
+    }
+    .menu-text{
+        font-size: 30px;
+    }
+}
+@media (min-width:390px) and (max-width:438px){
+    .title-text{
+        font-size: 3rem;
+    }
+    .image-slider{
+        width:auto;
+        height: auto;
+        margin:1rem auto;
+        padding:170px 0;
+        position: relative;
+    }
+    .quote{
+        padding:1rem 0;
+        width:auto;
+    }
+    .quote-text{
+        padding:0;
+        font-size:1.2rem;
+    }
+    .quote-footer{
+        font-size:0.8rem;
+    }
+    .nav-btn-toggle{
+        top:3rem;
+        width:30px;
+        aspect-ratio: 1;
+    }
+    .about{
+        flex-direction: column;
+        flex-wrap:wrap; 
+        width:auto;
+        height:auto;
+        padding:10px 1rem;
+        justify-content: space-between;
+        margin:0.5rem auto;
+        align-items: center;
+    }
+    .about-banner{
+        width:auto;
+        height:auto;
+        padding:5px 0.8rem;
+        border:2px solid lightgray;
+        border-radius: 5px;
+        margin:0.8rem auto;
+       
+    }
+    .about-banner p{
+        text-align:center;
+        margin:0.2rem 0.2rem 0 0.2rem;
+        padding:0.5rem 0.5rem;
+        font-size:1.8rem;
+    }
+    .about-details{
+        width:auto;
+        max-height:50%;
+        text-align:justify;
+        padding:5px 0;
+        margin:0.5rem 0;
+        font-size:15px;
+    }
+    .para-container{
+        padding:0 0;
+    }
+    .para-container p,h2{
+        margin-bottom:0.8rem;
+    }
+    h2{
+        text-align:center;
+        font-size:1.5rem;
+    }
+
+    .marketing-background{
+        width:auto;
+        height:auto;
+        padding:100px 0 50px 0;
+        background-image:url("../IMAGES/marketing-small.png");
+        background-attachment:scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .marketing-caption{
+        width:auto;
+        height: auto;
+        padding:1.5rem 0 4rem;
+        margin:0 auto;
+        background-color:transparent;
+        align-items:center;
+    }
+    .marketing-caption p{
+        width:auto;
+        font-size:3.4rem;
+        padding:2rem 0;
+        margin: auto;
+    }
+
+    .catering{
+        gap:0.5rem;
+        width:auto;
+        height:auto;
+        padding:1rem 0;
+        margin:0.5rem auto; 
+    }
+   .cater-image-container{
+        width:auto;
+        height:auto;
+        padding:1rem 1.5rem;
+    }
+     
+    .cater-image{
+        width:100%;
+        height:auto;
+    }
+    
+    .catering-detail{
+        width:100%;
+        height:auto;
+        padding:0.5rem 0.5rem;
+        margin-inline:auto;
+    }
+    
+    h3{
+        width:auto ;
+        font-size: 1.2rem;
+        font-family:"Asap", sans-serif;
+        color:#24240e;
+        padding:0;
+        text-align:center;
+    }
+    
+    .catering-quote{
+        width:auto ;
+        font-family:"Asap", sans-serif;
+        color:#414138;
+        font-style: italic;
+        padding:0;
+        text-align:center;
+        font-size: 0.8rem;
+        margin:0 auto 1rem auto;
+    }
+    
+    .catering-para{
+        width:auto ;
+        font-size:15px;
+        font-family:"Asap", sans-serif;
+        text-align: left;
+        color:#414138;
+        padding:0;
+        margin:0.5rem;
+        text-align: left;
+    }
+    .order-details{
+        width:auto;
+        height:auto;
+        margin:0.5rem 0;
+        padding:0 0;
+    }
+    .order-time{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:center;
+        width:auto;
+        padding:90px 0 60px 0;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../IMAGES/decorative-small.png");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        background-attachment:local;
+    }
+    
+    .timing{
+        width:100%;
+        height: auto;
+        padding:0.2rem 0;
+        margin:0 20px;
+        background-color:transparent; 
+    }
+     
+    .time-head{
+        margin-bottom:0.5rem;
+        text-align:center;
+        font-size:1.8rem;
+        font-family:"Asap",sans-serif;
+        color:#fcfaf7;
+    }
+    
+    .time-details{
+        margin-bottom:0.5rem;
+        text-align: center;
+        font-family:"Asap",sans-serif;
+        font-size:1.1rem;
+        color:#fcfaf7;
+    } 
+    .food-del-link{
+        width:100%;
+        height: auto;
+        padding:0.5rem 0;
+        margin:0 50px;
+        background-color:transparent; 
+    }
+    .footer-contact{
+        width:auto;
+        height:auto;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin:0.5rem 0;
+        padding:0 0.5rem 0 0.5rem;
+       
+    }
+    .contact-container{
+        width:auto;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .head{
+        margin-bottom:0.4rem;
+        font-size:1.5rem;
+        font-family:"Asap",sans-serif ;
+        color:#000000;
+    }
+    .details{
+        width:100%;
+        height:auto;
+        font-size:1rem;
+        font-family:"Asap",sans-serif ;
+        color:#52432e;
+    }
+    .policy{
+        font-size:10px;
+        width:auto; 
+    }
+    .footer-social p{
+        font-size:0.9rem;
+        font-family:"Asap",sans-serif ;
+        color:#000000;
+    }
+
+    .footer-end p,h6{
+        font-size:10px;
+        font-family:"Asap",sans-serif ;
+        color:#000000;
+    }
+    .menu-header{
+        font-size: 2rem;
+    }
+    .menu-text{
+        font-size: 27px;
+    }
+}
+
+
+@media (min-width:375px) and (max-width:390px){
+    .title-text{
+        font-size: 2.5rem;
+    }
+    .image-slider{
+        width:auto;
+        height: auto;
+        margin:1rem auto;
+        padding:160px 0;
+        position: relative;
+    }
+    .quote{
+        padding:1rem 0;
+        width:auto;
+    }
+    .quote-text{
+        padding:0;
+        font-size:1.2rem;
+    }
+    .quote-footer{
+        font-size:0.8rem;
+    }
+    .nav-btn-toggle{
+        top:3rem;
+        width:30px;
+        aspect-ratio: 1;
+    }
+    .about{
+        flex-direction: column;
+        flex-wrap:wrap; 
+        width:auto;
+        height:auto;
+        padding:10px 1rem;
+        justify-content: space-between;
+        margin:0.5rem auto;
+        align-items: center;
+    }
+    .about-banner{
+        width:auto;
+        height:auto;
+        padding:5px 1rem;
+        border:2px solid lightgray;
+        border-radius: 5px;
+        margin:0.5rem auto;
+       
+    }
+    .about-banner p{
+        text-align: justify;
+        margin:0.5rem 0.2rem 0 0.2rem;
+        padding:0.5rem 0.5rem;
+        font-size:1.5rem;
+    }
+    .about-details{
+        width:auto;
+        max-height:50%;
+        text-align:justify;
+        padding:5px 0;
+        margin:0.5rem 0;
+        font-size:13px;
+    }
+    .para-container{
+        padding:0 0;
+    }
+    .para-container p,h2{
+        margin-bottom:0.8rem;
+    }
+    h2{
+        text-align:center;
+        font-size:1.5rem;
+    }
+    .marketing-background{
+        width:auto;
+        height:auto;
+        padding:70px 0 30px 0;
+        background-image:url("../IMAGES/marketing-smallest.png");
+        background-attachment:scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .marketing-caption{
+        width:auto;
+        height: auto;
+        padding:1.5rem 0 4rem;
+        margin:0 auto;
+        background-color:transparent;
+        align-items:center;
+    }
+    .marketing-caption p{
+        width:auto;
+        font-size:3.2rem;
+        padding:2rem 0;
+        margin: auto;
+    }
+    .catering{
+        flex-wrap: wrap;
+        gap:0;
+        width:auto;
+        height:auto;
+        padding:0.5rem 0;
+        margin:0.5rem auto; 
+    }
+    .cater-image-container{
+        width:auto;
+        height:auto;
+        padding:1.5rem;
+    }
+    .cater-image{
+        width:100%;
+        height:auto;
+    }
+    .catering-detail{
+        width:100%;
+        padding:0.5rem 0.5rem;
+        margin:0;
+    }
+    h3{
+        font-size:1rem;
+        font-family:"Asap", sans-serif;
+        color:#24240e;
+        padding:0;
+        text-align:center;
+    }
+    .catering-quote{
+        font-family:"Asap", sans-serif;
+        color:#414138;
+        font-style: italic;
+        padding:0;
+        text-align:center;
+        font-size: 0.6rem;
+        margin:0 auto 1rem auto;
+    }
+    .catering-para{
+        font-size:12px;
+        font-family:"Asap", sans-serif;
+        color:#414138;
+        padding:0;
+        margin-bottom:0.5rem;
+    }
+    .order-details{
+        width:auto;
+        height:auto;
+        margin:0.5rem 0;
+        padding:0 0;
+    }
+    .order-time{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:center;
+        width:auto;
+        padding:60px 0 30px 0;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../IMAGES/decorative-smallest.png");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        background-attachment:local;
+    }
+    
+    .timing{
+        width:100%;
+        height: auto;
+        padding:0.2rem 0;
+        margin:0 20px;
+        background-color: transparent;
+    }
+     
+    .time-head{
+        margin-bottom:0.5rem;
+        text-align:center;
+        font-size:1.7rem;
+        font-family:"Asap",sans-serif;
+        color:#fcfaf7;
+    }
+    
+    .time-details{
+        margin-bottom:0.5rem;
+        text-align: center;
+        font-family:"Asap",sans-serif;
+        font-size:1.1rem;
+        color:#fcfaf7;
+    } 
+    .food-del-link{
+        width:100%;
+        height: auto;
+        padding:0.5rem 0;
+        margin:0 50px;
+        background-color: transparent;
+        text-align: center;
+    }
+
+    .footer-contact{
+        width:auto;
+        height:auto;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin:0.5rem 0;
+        padding:0 0.5rem 0 0.5rem;
+       
+    }
+    .contact-container{
+        width:auto;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .head{
+        margin-bottom:0.4rem;
+        font-size:1.2rem;
+        font-family:"Asap",sans-serif ;
+        color:#000000;
+    }
+    .details{
+        width:100%;
+        height:auto;
+        font-size:14px;
+        font-family:"Asap",sans-serif ;
+        color:#52432e;
+    }
+    .policy{
+        font-size:10px;
+        width:auto; 
+    }
+    .footer-social p{
+        font-size:0.8rem;
+        font-family:"Asap",sans-serif ;
+        color:#000000;
+    }
+
+    .footer-end p,h6{
+        font-size:9px;
+        font-family:"Asap",sans-serif ;
+        color:#000000;
+    }
+    .menu-header{
+        font-size: 1.5rem;
+    }
+    .menu-text{
+        font-size: 25px;
+    }
+}
+
+
+
+
+
+
