@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/catering-contact.css">
+    <title>Catering Contact</title>
+</head>
+<body>
+    <div class="page">
+        <header class="page-header">
+            <nav class="page-nav">
+                <div class="title"><h1><span class="title-text">Barometer</span></h1></div>
+
+                <button class="nav-btn-toggle" aria-controls="nav-list" aria-expanded="false"><span class="sr-only"></span></button><!-- Important -->
+
+                <ul id="nav-list" class="nav-list" data-visible="false">
+                    <li class="nav"><a class="nav-link" href="">About</a></li>
+                    <li class="nav"><a class="nav-link" href="">Catering Services</a></li>
+                    <li class="nav"><a class="nav-link" href="">Menu</a></li>
+                    <li class="nav"><a class="nav-link" href="">Contact</a></li>
+                </ul>
+                <div class="social-nav">
+                    <ul class="head-social-list">
+                        <li><a class="social-link" href="https://twitter.com/"><img src="../IMAGES/twitter.png" alt="twitter" title="twiiter"></a></li>
+                        <li><a class="social-link" href="https://www.instagram.com/"><img src="../IMAGES/instagram.png" alt="instagram" title="instagram"></a></li>
+                    </ul>
+                </div>
+
+            </nav>
+
+        </header>
+
+        <div class="form-container">
+
+            <div class="catering-head">Enter Your Details</div>
+
+            <form class="contact-form" action="" method="get">
+
+                <div class="form-row">
+                    <label for="user-name"></label>
+                    <input class="input-area"  id="user-name" type="text" name="user-name" placeholder="Name" autocomplete="off" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="user-mail"></label>
+                    <input class="input-area" id="user-mail" type="email" name="user-email" placeholder="Email"  autocomplete="off" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="user-number"></label>
+                    <input class="input-area" id="user-number" type="tel" name="user-number" placeholder="Contact Number"  autocomplete="off" pattern="/[0-9]{10}/" required maxlength="10" minlength="10">
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <label for="user-area"></label>
+                        <input class="input-area" id="user-area" name="user-area" type="text" placeholder="Enter your flat no. and housing name"   required/>
+                    </div>
+                    <div>
+                        <label for="user-street"></label>
+                        <input class="input-area" id="user-street" name="user-street" type="text" placeholder="Nearest Landmark"  required/>
+                    </div>
+                    <div>
+                        <label for="locality"></label>
+                        <input class="input-area" type="text" name="area" id="locality" placeholder="Area/Locality" required>
+                    </div>
+                    <div>
+                        <label for="pin-code"></label>
+                        <input class="input-area" type="text" name="area" id="pin-code" placeholder="Pin Code" required>
+                    </div>
+                    <div>
+                        <label for="city"></label>
+                        <select class="input-select" id="city" name="city" >
+                            <option value="pune" id="city" selected><span>Pune</span></option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label for="booking-date"><span>Date</span></label>
+                    <input class="input-select" id="bookingFrom" type="date" name="booking-from"  autocomplete="off" required>
+                </div>
+
+                <div class="form-check">
+                    <legend class="check-text">When are we serving you?</legend>
+                    <div>
+                        <label for="user-time"><span class="check-text">Lunch</span></label>
+                        <input class="input-check"  class="user-time" type="checkbox" name="user-time-lunch" required>
+                    </div>
+                    <div>
+                        <label for="user-time"><span class="check-text">Dinner</span></label>
+                        <input class="input-ckeck"  id="user-time" type="checkbox" name="user-time-dinner" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="btn-container">
+                        <button class="submit-btn" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer class="page-footer">
+
+            <div class="footer-details">
+                <div class="footer-contact">
+                    <div class="contact-container">
+                        <p class="head">ADDRESS</p>
+                        <p class="details">
+                            Barometer Organisation, <br>Shop no 5,
+                            opposite Kothrud Bus Stand,<br>
+                            Pune - 411038,<br>
+                            Maharashtra,<br>
+                            India
+                        </p>
+                    </div>
+                    <div class="contact-container">
+                        <p class="head">Careers</p>
+                        <p class="details">
+                            Send your updated cv at 
+                            <br>
+                            barometergHR@gmail.com
+                        </p>
+                    </div>
+                    <div class="contact-container">
+                        <p class="head">Contact</p>
+                        <p class="details">Contact us ,  <a class="contact-link" href="contactForm.html"><span>here</span></a>
+                            <br>or call us at 0000234781.
+                        </p>
+                    </div>
+                </div>
+                <div class="policy">
+                    <a href="#">TERMS & CONDITIONS</a>
+                    &nbsp;|&nbsp;
+                    <a href="#">REFUND POLICY</a>
+                    &nbsp;|&nbsp;
+                    <a href="#">DELIVERY POLICY</a>
+                </div>
+                <div class ="footer-social">
+                    <p>Follow us on</p>
+                    <div class="social-container">
+                        <a href="https://twitter.com/"><img src="../IMAGES/twitter.png" alt="twitter_logo" title="twitter_logo" ></a>
+                        <a href="https://www.instagram.com/"><img src="../IMAGES/instagram.png" alt="instagram_logo" title="instagram_logo" ></a>
+                    </div>
+                </div>  
+                <div class="footer-end">
+                    <p>&copy; BAROMETER ORGANISATION &copy;</p>
+                    <h6>All Rights Reserved 2024</h6>
+                </div>
+            </div>
+            <a class="order-link" href="#">Order Now!</a>
+
+        </footer>
+    </div>
+    <script src="../JAVASCRIPT/nav.js"></script>
+</body>
+</html>
