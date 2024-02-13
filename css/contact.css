@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cute+Font&family=Dancing+Script:wght@500&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    height:auto;
+    margin:1rem auto 2rem auto;
+    padding:2rem 2rem;
+    background-color: #f9f9f9;
+}
+.catering-head{
+    width:auto;
+    padding:1rem 1rem;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.contact-form{
+    width:auto;
+    padding:1rem 1rem;   
+}
+.form-row{
+    width:100%;
+    margin-bottom: 1rem;
+}
+.input-area{
+    width:350px;
+    height:36px;
+    padding:0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:1rem;
+}
+
+.form-row span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:1.1rem;
+}
+.input-select{
+    width:120px;
+    height:30px;
+}
+.form-check{
+    display: flex;
+    justify-content:space-between;
+    width:100%;
+    margin-bottom: 1rem;
+}
+.check-text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:1.1rem;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+.submit-btn{
+    width:80px;
+    height:37px;
+    margin-top: 1rem;
+    margin-inline:auto;
+    background-color:#1f1f0d;
+    color:#ffff;
+    cursor: pointer;
+    font-size:1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.submit-btn:hover{
+    font-size:1.1rem;
+}
