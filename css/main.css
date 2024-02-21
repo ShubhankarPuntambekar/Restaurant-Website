@@ -59,8 +59,8 @@ body{
 }
 .nav-link ,.nav-link:visited{
     text-decoration: none;
-    color:#313114;
-    font-size:1rem;
+    color:#191909;
+    font-size:1.1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing:0.05em;
     text-align: center;
@@ -447,6 +447,7 @@ h3{
     display: block;
     width:85px;
     padding:1rem 0.2rem 0 0.2rem;
+    scroll-margin-top: 5rem;
     background-color:#8c2c96;
     aspect-ratio:1;
     border:2px solid #313114;
@@ -561,10 +562,12 @@ h3{
         justify-content:center;
         align-items:flex-start;
         order: 2;
+        color:#000000;
+        font-size:1.5rem;
         z-index:20;
         gap:0;
         padding:min(30vh,10rem) 3rem;
-        background:hsla(55, 59%, 33%, 0.2);
+        background:hsla(54, 56%, 32%, 0.353);
         backdrop-filter: blur(1rem);
         transform: translateX(100%);
         transition: transform 350ms ease-out;
