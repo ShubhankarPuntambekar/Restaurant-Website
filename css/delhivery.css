@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --text-color:#24240e;
+    --border-color:#24240e9b;
+    --shadow-color:#bebebe;
+    --seperator-line:1px solid #80808044;
+    --font-grape:'Grape Nuts', cursive;
+    --font-mukta :'Mukta', sans-serif; 
+    --font-inter: "Inter", sans-serif;
+    --font-mulish:"Mulish", sans-serif;
+    --font-noto:"Noto Sans JP", sans-serif;
+    --font-hind: "Hind Siliguri", sans-serif;
+}
+li{
+    list-style: none;
+}
+.nav-container{
+    width:auto;
+    padding:1rem 0;
+    border-bottom: var(--seperator-line);
+}
+.page-navi{
+    display: flex;
+    padding:1rem;
+    justify-content:space-around;
+    align-items:center;
+}
+.header-text{
+    color:var(--text-color);
+    font-size:min(7vw,40px);
+    font-family: var(--font-grape);
+}
+.toggle-switch{
+    width:95px;
+    height:30px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:0.2rem;
+    border-radius:5px;
+    border-bottom: 1px solid var(--shadow-color);
+    box-shadow: 1px 7px 10px var(--shadow-color);
+}
+.toggle-title{
+    color:var(--text-color);
+    font-family: var(--font-mulish);
+    font-size:1rem;
+    font-weight:700;
+}
+.main-container{
+    display: flex;
+    width:100vw;
+    padding:0 350px;
+    
+}
+.aside-container{
+    width:min(130px,200px);
+    padding-top:2rem;
+    padding-right:1.5rem;
+    border-right: var(--seperator-line);
+}
+
+.aside-header{
+    width:auto;
+    margin-top:3rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-family:var(--font-inter);
+    font-size:1.3rem;
+    font-weight:600;
+    color:var(--text-color);
+}
+.menu-list{
+    width:100px;
+    text-align:left;
+    margin-top:1rem;
+}
+
+.menu-item-container{
+    width:100%;
+    padding:2rem 0; 
+   
+}
+.menu-item{
+    display: block;
+    height:35px;
+    width:120px;
+    cursor: pointer;
+    font-family:var(--font-mulish);
+    font-size:1.1rem;
+    font-weight: 550;
+    margin-bottom:1rem;
+    color:var(--text-color);
+    text-decoration: none;
+}
+.menu-item:hover{
+    border-bottom:2.5px solid #24240eb5;
+}
+.main-store-container{
+    padding-inline:3rem;
+    flex:2;
+}
+
+.menu-category{
+    width:auto;
+    margin-top:3.5rem;
+    margin-inline:0.5rem;
+}
+.category{
+    width:100%;
+    padding:0.5rem 0;
+}
+.category-title{
+    font-family: var(--font-noto);
+    font-size: 1.5rem;
+    font-weight:500;
+    padding-bottom:0.5rem;
+}
+.title-count{
+    width:auto;
+    margin-top:0.3rem;
+}
+.number{
+    font-family: var(--font-hind);
+    font-weight: 200;
+    font-size:min(3vw 0.6rem);
+    color:#24240e
+}
+.category-list{
+    display:grid;
+    width:auto;
+    grid-template-columns: repeat(2,minmax(370px,450px));
+    column-gap: 25px;
+    row-gap: 10px;
+    margin-top:2rem;
+    /* justify-content:center; */
+    align-items: center;
+}
+.category-item{
+    display:flex;
+    width:auto;
+    height:90px;
+    justify-content:space-around;
+    border-bottom:var(--seperator-line);
+}
+.item-container{
+    width:auto;
+    padding:0.5rem;
+}
+.item-details{
+    width:250px;
+    margin-top:0.5rem;
+}
+.item-text{
+    font-family: var(--font-hind);
+    font-size:1.2rem;
+    font-weight: 600;
+}
+.item-price{
+    font-family: var(--font-mulish);
+    font-weight: 400;
+    font-size:min(5vw,0.8rem);
+}
+.add-to{
+    display:flex;
+    width:auto;
+    flex-direction:column;
+    justify-content: center;
+}
+.add-btn{
+    width:120px;
+    height: 31px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 1px 1px var(--shadow-color);
+}
+.add-text{
+    font-family: var(--font-mulish);
+    font-weight:700;
+    text-align: center;
+}
+
+.veg.food-icon{
+    display: flex;
+    width:12px;
+    height:12px;
+    border:1px solid green;
+    justify-content: center;
+    align-items: center;
+
+}
+.veg.inner-icon{
+    width:6px;
+    height:6px;
+    border:1px solid green;
+    border-radius: 50%;
+    background-color:green;
+}
+.nonveg.food-icon{
+    display: flex;
+    width:12px;
+    height:12px;
+    border:1px solid #7c0808;
+    justify-content: center;
+    align-items: center;
+
+}
+.nonveg.inner-icon{
+    width:6px;
+    height:6px;
+    border:1px solid #570404;
+    border-radius: 50%;
+    background-color:#6b0101;
+}
+.cart-container{
+    display: none;
+    position: fixed;
+    width:100%;
+    padding:0 5px;
+    border-top:var(--seperator-line);
+    bottom:0;
+    background-color:#fcfaf7;
+}
+.cart-wrapper{
+    display: flex;
+    justify-content:space-around;
+    margin:0 5rem;
+    padding:1rem;
+    align-items: center;
+}
+.cart-details{
+    padding:1rem 0.5rem;
+    font-family: var(--font-mukta);
+    font-size: min(6vw,1.1rem);
+}
+.go-to{
+    display: block;
+    padding:1rem 1rem;
+    color:#fcfaf7;
+    background-color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--font-mukta);
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px var(--shadow-color);
+}
+@media (max-width:1250px){
+    .main-container{
+        padding:0 100px;
+        justify-content:space-evenly;
+    }
+}
+
+@media (max-width:1042px){
+    .aside-container{
+        display: none;
+    }
+    .main-container{
+        padding:22px;
+        justify-content:center;
+    }
+    .main-store-container{
+        padding-inline:0;
+    }
+    .category-list{
+        column-gap: 10px;
+    }
+    .category-title{
+      
+        font-size: 1.3rem;
+       
+    }
+}
+
+@media (max-width:775px){
+    .main-container{
+        display: block;
+        padding:0.5rem;
+    }
+    .category-list{
+        display:flex;
+        flex-direction: column;
+        width:auto;
+    }
+    .category-item{
+        width:100%;
+    }
+    .category-title{
+      
+        font-size: 1.2rem;
+       
+    }
+}
+@media (max-width:410px){
+    .main-container{
+        display: block;
+        padding:0.5rem;
+    }
+    .main-store-container{
+       
+        padding:0.5rem;
+        flex:1;
+    }
+    .menu-category{
+        width:100%;
+        padding:0.5rem;
+    }
+    .item-container{
+        padding:0;
+    }
+    .go-to{
+        padding:1rem 0.5rem;
+        font-size:0.8rem;
+    }
+    .category-title{
+      
+        font-size: 1.1rem;
+       
+    }
+}
