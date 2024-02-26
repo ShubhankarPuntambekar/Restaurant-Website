@@ -12,6 +12,7 @@
     --text-color:#24240e;
     --border-color:#24240e9b;
     --shadow-color:#bebebe;
+    --background-color:#bebebe29;
     --seperator-line:1px solid #80808044;
     --font-grape:'Grape Nuts', cursive;
     --font-mukta :'Mukta', sans-serif; 
@@ -59,7 +60,7 @@ li{
 .main-container{
     display: flex;
     width:100vw;
-    padding:0 350px;
+    padding:0 15%;
     
 }
 .aside-container{
@@ -151,6 +152,7 @@ li{
     height:90px;
     justify-content:space-around;
     border-bottom:var(--seperator-line);
+    align-items: center;
 }
 .item-container{
     width:auto;
@@ -176,20 +178,53 @@ li{
     flex-direction:column;
     justify-content: center;
 }
-.add-btn{
+
+.add{
+    display:flex;
+    width:auto;
+    justify-content: center;
+}
+.addLabel[aria-display="true"]{
     width:120px;
     height: 31px;
     text-align: center;
     cursor: pointer;
     border-radius: 8px;
     box-shadow: 1px 1px var(--shadow-color);
+    font-family: var(--font-mulish);
+    font-weight:700;
+    font-size: 1.2rem;
+    text-align: center;
 }
-.add-text{
+.addLabel[aria-display="false"]{
+    display: none;
+}
+
+.quantity[aria-display = "true"]{
+    display: flex;
+    width:120px;
+    height: 31px;
+    justify-content: space-around;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 1px 1px var(--shadow-color);
     font-family: var(--font-mulish);
     font-weight:700;
     text-align: center;
 }
+.quantity[aria-display = "false"]{
+    display: none;
+}
 
+.reduce,
+.total,
+.increase{
+    font-family: var(--font-mulish);
+    color:var(--text-color);
+    font-weight: 700;
+    font-size:1.1rem;
+}
 .veg.food-icon{
     display: flex;
     width:12px;
@@ -222,8 +257,8 @@ li{
     border-radius: 50%;
     background-color:#6b0101;
 }
-.cart-container{
-    display: none;
+.cart-container[aria-display = "true"]{
+    /* display: flex; */
     position: fixed;
     width:100%;
     padding:0 5px;
@@ -238,7 +273,7 @@ li{
     padding:1rem;
     align-items: center;
 }
-.cart-details{
+.added-items{
     padding:1rem 0.5rem;
     font-family: var(--font-mukta);
     font-size: min(6vw,1.1rem);
@@ -254,6 +289,73 @@ li{
     font-weight: 500;
     cursor: pointer;
     box-shadow: 2px 2px 5px var(--shadow-color);
+}
+.page-end{
+    width:100%;
+    height: auto;
+    padding:1rem 2rem 0 2rem;
+    background-color: var(--background-color);
+    margin-top:3rem;
+    border-radius: 6px;
+}
+.end{
+    display: flex;
+    flex-direction: column;
+    width:auto;
+    height:auto;
+    padding:1rem 1rem 2rem 1rem;
+   
+}
+.end > h5{
+    font-family: var(--font-mukta);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+h5 ~ div{
+    padding:0.5rem 0;
+    font-family:"Asap", sans-serif;
+}
+.end-company{
+    width:auto;
+    height:auto;
+    padding:1rem 0 1rem 0;
+}
+.end-company div{
+    padding:0 1rem;
+    font-family: var(--font-mukta);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color:#24240eb1;
+}
+.end-company p{
+    padding:0 1rem;
+    font-family: var(--font-mukta);
+    font-size: 1rem;
+    font-weight: 400;
+    color:#24240eb1;
+}
+.rights{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    justify-content: center;
+    align-items:flex-start;
+    margin-top:1rem;
+    padding-bottom:1rem;
+}
+.rights p{
+    padding:0 1rem;
+    font-family: "Asap", sans-serif;
+    font-size:0.8rem;
+    font-weight: 600;
+    color:#24240e;
+}
+.rights h6{
+    padding:0 1rem;
+    font-family: "Asap", sans-serif;
+    font-size:0.8rem;
+    font-weight:600;
+    color:#24240e;
 }
 @media (max-width:1250px){
     .main-container{
