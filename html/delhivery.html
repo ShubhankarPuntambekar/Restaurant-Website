@@ -14,15 +14,36 @@
             <div class="nav-container">
                 <nav class="page-navi ">
                     <h1 class="header-text">Barometer-delhivery</h1>
-                    <div class="toggle-switch">
-                        <span class="toggle-title">Veg Only</span>
-                        <label for="switch"></label>
-                        <input type="checkbox" id="switch">
-                    </div>
+                    <button class="toggle-switch toggle-title">
+                        View Cart
+                        <!-- <span class="toggle-title"></span> -->
+                    </button>
                 </nav>
             </div>
         </header>
-
+        <dialog class="cart-container">
+            <div class="close-dialoge">
+                <button class="close-btn">
+                    <img class="exit" src="../images/close.png" alt="close-dialoge">
+                </button>
+            </div>
+            <div class="cart-wrapper">
+                <div class="cart-headers">
+                    <div class="head">Name</div>
+                    <div class="head">Qt.</div>
+                    <div class="head">Price</div>
+                </div>
+                <div id="viewCart" class="added-item" aria-display="false">
+                    <!-- Items are collected here  -->
+                </div>
+            </div>
+            <div class="total-amount">
+                <div class="total-head">Total :</div>
+                <div class="pay">₹200</div>
+            </div>
+            <button class="place-ord">Place Order</button>
+            
+        </dialog>
         <div class="main-container">
            <div class="aside-container">
                 <h4 class="aside-header">Menu</h4>
@@ -1141,7 +1162,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <section class="page-end">
                     <div class="end">
                         <h5 class="page-end-header">Barometer</h5>
@@ -1166,15 +1187,15 @@
 
         <footer class="page-footer">
 
-            <div class="cart-container" aria-display="false">
+            <!-- <div class="cart-container" aria-display="false">
                 <div class="cart-wrapper">
-                    
                     <div id="viewCart" class="added-item" aria-display="false">
-                        
+                        Items are collected here 
                     </div>
-                   
                 </div>
-            </div> 
+            </div>  -->
+
+            
         </footer>   
     </div>
     <script src="../javascript/delhivery.js"></script>
