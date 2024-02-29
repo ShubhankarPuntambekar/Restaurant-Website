@@ -77,6 +77,8 @@ const viewList = document.querySelector(".toggle-switch");
 const cart = document.querySelector(".added-item");
 const closeDialog = document.querySelector(".exit");
 const itemCont = document.querySelector(".category-item");
+const amnt = document.querySelector(".pay");
+const placeOrder = document.querySelector(".place-ord");
 let itemsArray = [];
 
 document.addEventListener("click", (e) => {
@@ -100,10 +102,10 @@ document.addEventListener("click", (e) => {
       );
     } else {
       count--;
-      inCart(parent, atriValue, count);
 
       obj[parent][atriValue]["total"] = count;
       btn.nextElementSibling.innerText = count;
+      inCart(parent, atriValue, count);
     }
   } else if (btn.className === "increase") {
     let atriValue = btn.parentNode.getAttribute("id");
@@ -120,37 +122,54 @@ document.addEventListener("click", (e) => {
 });
 
 function inCart(parent, atri, count) {
-  let cartItem;
+  let sub = 0;
   if (itemsArray.includes(obj[parent][atri])) {
-    cartItem = itemsArray.find((item) => item.id === obj[parent][atri]["id"]);
-    cartItem["total"] = count;
+    obj[parent][atri]["total"] = count;
   } else {
     itemsArray.push(obj[parent][atri]);
   }
-  viewCart();
-  console.log(itemsArray);
+  itemsArray.forEach((item) => {
+    sub += item.total * item.price;
+  });
+  amnt.innerHTML = "";
+  amnt.innerHTML += `₹${sub}`;
 }
-
-document.addEventListener("click", (e) => {
-  let ele = e.target;
-  if (ele.className === "toggle-switch toggle-title") {
-    cart.setAttribute("aria-display", "true");
-    itemDetails.showModal();
-  } else if (ele.className === "exit") {
-    // cart.setAttribute("aria-display", "false");
-    itemDetails.close();
-  }
-});
 
 function viewCart() {
   cart.innerHTML = "";
   itemsArray.forEach((item) => {
-    cart.innerHTML += `
-      <div class="add">
+    if (item.total !== 0) {
+      cart.innerHTML += `
+      <div class="cAdd">
         <div class="inCart cart-item-text">${item.name}</div>
         <div class="inCart cart-total">${item.total}</div>
         <div class="inCart tol-price">₹${item.total * item.price}</div>
       </div>    
     `;
+    }
   });
 }
+
+document.addEventListener("click", (e) => {
+  let ele = e.target;
+  if (ele.className === "toggle-switch toggle-title") {
+    itemDetails.showModal();
+    viewCart();
+  } else if (ele.className === "exit") {
+    itemDetails.close();
+  }
+});
+
+document.addEventListener("click", (e) => {
+  let ele = e.target;
+  if (ele.className === "place-ord") {
+    if (amnt.innerHTML !== "₹0") {
+      alert("Order Placed Successfully");
+      itemDetails.close();
+      location.reload();
+    } else {
+      alert("Cart is empty!");
+      itemDetails.close();
+    }
+  }
+});
