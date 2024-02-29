@@ -483,6 +483,35 @@ h5 ~ div{
         font-size: 1.2rem;
        
     }
+    .total-amount{
+        padding:0.5rem 1.5rem 0.5rem 2.7rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .cart-item-text{
+        width:180px;
+        font-size:1rem;
+    }
+    .cart-total{
+        position:relative;
+        text-align: center;
+        right:15px;
+        font-size:1rem;
+    }
+    .total-head{
+
+    }
+    .pay{
+        position: relative;
+        right: 10px;
+       
+    }
+    .tol-price{
+        font-size:1rem;
+        position:relative;
+        text-align: center;
+        right:5px;
+    }
 }
 @media (max-width:410px){
     .main-container{
@@ -509,5 +538,37 @@ h5 ~ div{
       
         font-size: 1.1rem;
        
+    }
+    .total-amount{
+        padding:0.5rem 0.5rem 0.5rem 1.7rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .cAdd{
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+    .inCart{
+        width:150px;
+        text-align: center;
+        font-family: var(--font-mulish);
+        font-size: min(6vw,1rem);
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+    .cart-item-text{
+        width:180px;
+        font-size:0.9rem;
+    }
+    .cart-total{
+        position:relative;
+        text-align: center;
+        right:12px;
+        font-size:0.9rem;
+    }
+    .tol-price{
+        font-size:0.9rem;
     }
 }
